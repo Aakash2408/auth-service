@@ -15,7 +15,6 @@ func RegisterUser(ctx context.Context, conn *grpc.ClientConn, name, email, phone
 	req := &userpb.CreateUserRequest{
 		Name:        name,
 		Email:       email,
-		PhoneNumber: phone,
 	}
 
 	log.Printf("registering user: name=%s email=%s phone=%s", name, email, phone)
